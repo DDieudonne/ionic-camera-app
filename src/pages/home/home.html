@@ -1,0 +1,24 @@
+<ion-content padding>
+
+  <div class="empty-class" *ngIf="!base64Image">
+    <h1>Selectionner un type de média</h1>
+    <ion-icon name="image"></ion-icon>
+  </div>
+
+  <img [src]="base64Image" alt="base64Image" *ngIf="base64Image != null">
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row col-12 justify-content-center>
+      <button ion-button round color="primary" col-4 (click)="importLibrary()">
+        <ion-icon name="images"></ion-icon>
+      </button>
+      <button ion-button round color="danger" col-4 (click)="openCamera()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-row>
+  </ion-grid>
+
+</ion-footer>
